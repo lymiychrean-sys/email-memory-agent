@@ -15,3 +15,8 @@ uv run main.py "Skipped legs, sore knee."
 ```
 
 Memory lives in `memory.db` (gitignored).
+
+
+
+
+

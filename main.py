@@ -1,7 +1,7 @@
-"""Workout coach that emails you: send your workout status, get a motivational line and a next step.
+"""Workout coach that emails you: send your workout status or summary, get a motivational line and your next step.
 
 Usage: uv run main.py "<workout summary or status>"
-Every email is saved, and each new one builds on the whole history.
+Every email is saved, like a couch that knows you and each new one builds on the whole history.
 """
 
 import os
@@ -22,7 +22,7 @@ EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_SMTP_SERVER = os.getenv("EMAIL_SMTP_SERVER")
 EMAIL_APP_PASSWORD = os.getenv("EMAIL_APP_PASSWORD")
 
-SYSTEM = """You are a personal workout coach guiding the user through their workout plan.
+SYSTEM = """You are a personal workout coach guiding the user through their workout plan. Keep your responses short, motivational, and actionable.
 The user sends a short workout summary or status. You reply by email, very short:
 one motivational phrase, then one clear next step for their next workout.
 Use the history of past check-ins to track progress and keep the plan consistent.
